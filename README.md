@@ -8,5 +8,7 @@
 
     Merci de votre compréhention
 
+  # Require
+    yarn pour build vue et node (node_modules)
   # Realisation
     par Evan, Yasmine et Matheo
