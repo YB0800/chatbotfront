@@ -1,0 +1,29 @@
+.bot-ui--animate {
+  // FadeUp
+  .fadeUp-enter-active,
+  .fadeUp-leave-active {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: opacity .15s linear, transform .2s ease-out;
+  }
+
+  .fadeUp-enter,
+  .fadeUp-leave-to {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+
+  // ScaleUp
+  .scaleUp-enter-active,
+  .scaleUp-leave-active {
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: opacity .1s linear, transform .2s ease-out;
+  }
+
+  .scaleUp-enter,
+  .scaleUp-leave-to {
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+}
