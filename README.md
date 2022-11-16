@@ -10,5 +10,9 @@
 
   # Require
     yarn pour build vue et node (node_modules)
+    Il faut npm avant bien entendu
+    Pour yarn : npm install --global yarn
+    Pour node_modules: npm install -g node-modules
+    
   # Realisation
     par Evan, Yasmine et Matheo
