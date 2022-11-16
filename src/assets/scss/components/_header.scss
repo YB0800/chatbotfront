@@ -1,0 +1,13 @@
+.zone-chat-header {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  height: $header-height;
+  padding: 5px 15px;
+}
+
+.zone-chat-header__title {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
