@@ -14,5 +14,9 @@
     Pour yarn : npm install --global yarn
     Pour node_modules: npm install -g node-modules
     
+    # Lancer le project en local
+      - yarn build
+      - yarn serve
+    
   # Realisation
     par Evan, Yasmine et Matheo
