@@ -26,6 +26,10 @@
     background-color: #f1f1f1;
 }
 
+.active {
+    max-height: 500px;
+}
+
 .full-chat-block {
     width: 350px;
     background: white;

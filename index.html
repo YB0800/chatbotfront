@@ -15,12 +15,12 @@
 
 <body>
     <!-- CHAT BAR BLOCK -->
-    <div class="chat-bar-collapsible">
-        <button id="chat-button" type="button" class="collapsible">Chatbot Sneak Me
-            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+    <div id="app" class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible" @click="toggleChatbox">Chatbot Sneak Me
+            <i id="chat-icon" class="fa fa-fw fa-comments-o"></i>
         </button>
 
-        <div class="content">
+        <div class="content" :class="{active: isActive}">
             <div class="full-chat-block">
                 <!-- Message Container -->
                 <div class="outer-container">
@@ -34,7 +34,7 @@
                         <!-- User input box -->
                         <div class="chat-bar-input-block">
                             <div id="userInput">
-                                <input id="textInput" class="input-box" type="text" name="msg"
+                                <input id="textInput" class="input-box" type="text" name="msg" v-model="msg"
                                     placeholder="Tapez 'Entrée' pour envoyer un message">
                                 <p></p>
                             </div>
@@ -43,7 +43,7 @@
                                 <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
                                     onclick="heartButton()"></i>
                                 <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
-                                    onclick="sendButton()"></i>
+                                    onclick="sendButton()" @click="traitementMessage"></i>
                             </div>
                         </div>
 
@@ -63,5 +63,30 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="static/scripts/responses.js"></script>
 <script src="static/scripts/chat.js"></script>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                isActive: true,
+                msg: ""
+            }
+        },
+        methods: {
+            toggleChatbox: function() {
+                this.isActive = !this.isActive
+            },
+            traitementMessage: function() {
+                console.log(this.msg)
+
+            }
+            // addItem: function() {
+            //     this.list.push('Orange' + (++this.counter).toString())
+            // }
+        }
+    }).mount('#app')
+</script>
+</script>
+
 
 </html>
